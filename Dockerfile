@@ -31,10 +31,10 @@ RUN \
   # Install Ruby and Gems
   pacman -S ruby --noconfirm && \
   gem install test-kitchen berkshelf kitchen-docker_cli bundler \
-    --no-user-install --no-rdoc --no-ri && \
+    --no-user-install --no-document && \
 
   # Install Foodcritic and Rubocop
-  gem install foodcritic rubocop --no-user-install --no-rdoc --no-ri && \
+  gem install foodcritic rubocop --no-user-install --no-document && \
 
   # Generate locale en_US (workaround for a strange bug in berkshelf)
   locale-gen en_US.UTF-8 && \
